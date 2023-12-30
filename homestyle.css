@@ -315,7 +315,7 @@ link h3 {
 }
 /*-------Aqui empiza el sistema respons--------*/
 
-@media(max-width:991px) {
+@media(max-width:791px) {
     .menu {
         padding: 30px;
     }
