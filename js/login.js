@@ -9,5 +9,6 @@
         return alert('Usuario y/o contraseña incorrectos!')
     }
     alert(`Bienvenid@ ${validUser.name} a la comunidad fGreat!`)
+    localStorage.setItem('login_success', JSON.stringify(validUser))
     window.location.href = 'index.html'
 })
