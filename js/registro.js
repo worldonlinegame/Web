@@ -8,7 +8,7 @@ registroform.addEventListener('submit', (e)=>{
     // creamos la base de datos en la store del navegador en un array
 
     const Users = JSON.parse(localStorage.getItem('users')) || []
-    isUserRegistered = Users.find(user => user.email === email)
+    isUserRegistered = Users.find(name => name.email === email)
     if(isUserRegistered){
         return alert('El usuario ya existe!')
     }
