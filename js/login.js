@@ -8,6 +8,6 @@
     if(!validUser){
         return alert('Usuario y/o contraseña incorrectos!')
     }
-    alert('Bienvenid@ ${validUser.name} a la comunidad fGreat!')
+    alert(`Bienvenid@ ${validUser.name} a la comunidad fGreat!`)
     window.location.href = 'index.html'
 })
