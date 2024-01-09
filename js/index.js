@@ -12,7 +12,7 @@ function subirImagen(){
     const myImage = document.getElementById("myFile")
     
     inputFile.addEventListener("change", e=>{
-        const Blob = inputFile.inpuImage[0]
+        const Blob = inputFile.inputFile[0]
         myFile.src = URL.createObjectURL(Blob)
     })
 
