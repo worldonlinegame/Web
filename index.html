@@ -32,7 +32,7 @@
                             
                             inputFile.addEventListener("change", e=>{
                                 console.log(myImage.file)
-                                const blob = inputFile.file[0]
+                                const blob = inputFile.files[0]
                                 myFile.src = URL.createObjectURL(blob)
                             })
                         </script>
