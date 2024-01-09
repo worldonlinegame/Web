@@ -31,6 +31,7 @@
                             const myImage = document.getElementById("myFile")
                             
                             inputFile.addEventListener("change", e=>{
+                                console.log(myImage)
                                 const blob = inputFile.inputFile[0]
                                 myFile.src = URL.createObjectURL(blob)
                             })
