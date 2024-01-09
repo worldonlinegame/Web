@@ -7,13 +7,3 @@ if(!user){
 
 
 
-function subirImagen(){
-    const inputFile = document.getElementById("myImage")
-    const myImage = document.getElementById("myFile")
-    
-    inputFile.addEventListener("change", e=>{
-        const blob = inputFile.inputFile[0]
-        myFile.src = URL.createObjectURL(blob)
-    })
-
-}

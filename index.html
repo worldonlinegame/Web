@@ -26,10 +26,19 @@
                     <div class="thumbnail">
                         <input type="file" name="" id="myImage">
                         <img src="" alt="imagen" id="myFile" class="img-responsive" />
+                        <script>
+                            const inputFile = document.getElementById("myImage")
+                            const myImage = document.getElementById("myFile")
+                            
+                            inputFile.addEventListener("change", e=>{
+                                const blob = inputFile.inputFile[0]
+                                myFile.src = URL.createObjectURL(blob)
+                            })
+                        </script>
                         <div class="caption">
                             <h4>Header Name</h4>
                             <p>Description</p>
-                            <p align="center"><a href="#" onclick="subirImagen" title="online shopping store For safety & secrity Products" class="btn btn-primary btn-block">Open</a>
+                            <p align="center"><a href="#" title="online shopping store For safety & secrity Products" class="btn btn-primary btn-block">Open</a>
                             </p>
                         </div>
                     </div>
