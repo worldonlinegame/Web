@@ -26,16 +26,7 @@
                     <div class="thumbnail">
                         <input type="file" name="" id="myImage">
                         <img src="" alt="imagen" id="myFile" class="img-responsive" />
-                        <script>
-                            const inputFile = document.getElementById("myImage")
-                            const myImage = document.getElementById("myFile")
-                            
-                            inputFile.addEventListener("change", e=>{
-                                console.log(myImage.file)
-                                const blob = inputFile.files[0]
-                                myFile.src = URL.createObjectURL(blob)
-                            })
-                        </script>
+                       
                         <div class="caption">
                             <h4>Header Name</h4>
                             <p>Description</p>
