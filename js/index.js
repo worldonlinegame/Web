@@ -8,7 +8,7 @@ if(!user){
 
 
 function subirImagen(){
-    const inpuImage = document.getElementById("myImage")
+    const inputFile = document.getElementById("myImage")
     const myImage = document.getElementById("myFile")
     
     inputFile.addEventListener("change", e=>{
