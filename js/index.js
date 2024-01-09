@@ -5,10 +5,15 @@ if(!user){
 
 /*Crear base de datos "blog" con javascript*/
 
-const inpuImage = document.getElementById("myImage")
-const myImage = document.getElementById("myFile")
 
-inputFile.addEventListener("change", e=>{
-    const Blob = inputFile.inpuImage[0]
-    myFile.src = URL.createObjectURL(Blob)
-})
+
+function subirImagen(){
+    const inpuImage = document.getElementById("myImage")
+    const myImage = document.getElementById("myFile")
+    
+    inputFile.addEventListener("change", e=>{
+        const Blob = inputFile.inpuImage[0]
+        myFile.src = URL.createObjectURL(Blob)
+    })
+
+}
