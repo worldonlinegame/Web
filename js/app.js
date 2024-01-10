@@ -38,5 +38,5 @@ inputFile.addEventListener("change", e=>{
 
 function myFunction() {
     sessionStorage.clear()
-    /*window.location.replace('login.html')*/
+    window.location.replace('login.html')
   }
