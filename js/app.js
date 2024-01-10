@@ -41,7 +41,7 @@ inputFile.addEventListener("change", e=>{
     // creamos la base de datos en la store del navegador en un array
 
     const Users = JSON.parse(localStorage.getItem('#SubirImage')) || []
-    isUserRegistered = inputFile.find(user => user.email === email)
+    isUserRegistered = Users.find(user => user.email === email)
     if(isUserRegistered){
         alert('No se pudo cargar la imagen')
     }
