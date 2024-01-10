@@ -50,4 +50,3 @@ inputFile.addEventListener("change", e=>{
     alert('Se ha registrado satisfactoriamente!')
     window.location.href = 'index.html'
     
-})
