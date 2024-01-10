@@ -23,10 +23,7 @@ table - 2 blog
 
 
 */
-const user = JSON.parse(localStorage.getItem('login_success')) || false
-if(!user){
-    window.location.href = 'login.html'
-}
+
 
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
@@ -40,6 +37,6 @@ inputFile.addEventListener("change", e=>{
 object.onclick = function(){myScript};
 
 function myFunction() {
-    document.getElementById("logout").onclick
-    window.location.replace('login.html')
+    sessionStorage.clear()
+    /*window.location.replace('login.html')*/
   }
