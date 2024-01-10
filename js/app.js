@@ -36,3 +36,8 @@ inputFile.addEventListener("change", e=>{
     const blob = inputFile.files[0]
     myFile.src = URL.createObjectURL(blob)
 })
+
+function cerrarSession(e){
+    document.getElementById("logout").click
+    sessionStorage.clear()
+}
