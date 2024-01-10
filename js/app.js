@@ -39,7 +39,7 @@ inputFile.addEventListener("change", e=>{
 
 
 const registroform = document.querySelector("#registroform")
-registroform.addEventListener('submit', (e)=>{
+registroform.addEventListener('#submit', (e)=>{
     e.preventDefault()
     const name = document.querySelector(myFile.src).value
     
