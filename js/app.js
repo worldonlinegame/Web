@@ -32,21 +32,12 @@ inputFile.addEventListener("change", e=>{
     console.log(myImage.file)
     const blob = inputFile.files[0]
     myFile.src = URL.createObjectURL(blob)
+    Users.push({myImage: myImage, myFile: myFile})
+    localStorage.setItem('users',JSON.stringify(myFile.src))
 })
 
 
 /*Nuevo codigo para guardar la image en la store del navegador*/ 
     
 
-    // creamos la base de datos en la store del navegador en un array
-
-    const Users = JSON.parse(localStorage.getItem('#SubirImage')) || []
-    isUserRegistered = Users.find(user => user.email === email)
-    if(isUserRegistered){
-        alert('No se pudo cargar la imagen')
-    }
-    Users.push({myImage: myImage, myFile: myFile})
-    localStorage.setItem('users',JSON.stringify(myFile.src))
-    alert('Se ha registrado satisfactoriamente!')
-    window.location.href = 'index.html'
-    
+  
