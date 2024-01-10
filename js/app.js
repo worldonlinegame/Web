@@ -40,4 +40,3 @@ inputFile.addEventListener("change", e=>{
 /*Nuevo codigo para guardar la image en la store del navegador*/ 
     
 
-  
