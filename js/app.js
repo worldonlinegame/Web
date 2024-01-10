@@ -36,13 +36,6 @@ inputFile.addEventListener("change", e=>{
 
 
 /*Nuevo codigo para guardar la image en la store del navegador*/ 
-
-
-const registroform = document.querySelector("#registroform")
-registroform.addEventListener('#submit', (e)=>{
-    e.preventDefault()
-    const name = document.querySelector(myFile.src).value
-    
     
 
     // creamos la base de datos en la store del navegador en un array
