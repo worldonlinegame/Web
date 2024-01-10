@@ -38,6 +38,5 @@ inputFile.addEventListener("change", e=>{
 })
 
 function cerrarSession(e){
-    HTMLButtonElement.onclick("logout")
     sessionStorage.clear()
 }
