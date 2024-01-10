@@ -4,7 +4,23 @@
 
 localhost: DBFGREATCONTACTOS.mssql.somee.com
 user: BobStudent_SQLLogin_1
-password: lo tengo que copiar del hosting de la base de datos
+password: 2gj4cyejhl
+
+table- 1: USUARIO
+    
+    IdUsuario
+    Email
+    Password
+
+    
+table - 2 blog
+   
+    iduser int
+    usuario varchar
+    Evento varchar
+    blog varchar
+    img varchar
+
 
 */
 
