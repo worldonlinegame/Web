@@ -23,6 +23,10 @@ table - 2 blog
 
 
 */
+const user = JSON.parse(localStorage.getItem('login_success')) || false
+if(!user){
+    window.location.href = 'login.html'
+}
 
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
