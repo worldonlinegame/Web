@@ -3,4 +3,10 @@ if(!user){
     window.location.href = 'login.html'
 }
 
+const logout = document.querySelector('#logout')
+logout.addEventListener('click', ()=>{
+    alert('Hasta pronto')
+    localStorage.removeItem('login_success')
+    window.location.href = 'login.html'
+})
 /*Crear base de datos "blog" con javascript*/

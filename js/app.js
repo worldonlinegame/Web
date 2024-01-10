@@ -34,10 +34,3 @@ inputFile.addEventListener("change", e=>{
     myFile.src = URL.createObjectURL(blob)
 })
 
-object.onclick = function(){myScript};
-
-function myFunction() {
-    const user = JSON.parse(localStorage.getItem('login_success'))== false
-    sessionStorage.clear()
-    window.location.replace('login.html')
-  }
