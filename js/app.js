@@ -37,6 +37,7 @@ inputFile.addEventListener("change", e=>{
 object.onclick = function(){myScript};
 
 function myFunction() {
+    const user = JSON.parse(localStorage.getItem('login_success'))== false
     sessionStorage.clear()
     window.location.replace('login.html')
   }
