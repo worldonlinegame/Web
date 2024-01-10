@@ -34,7 +34,7 @@ inputFile.addEventListener("change", e=>{
     myFile.src = URL.createObjectURL(blob)
 })
 
-object.onclick = function(){myScript};
+
 
 function myFunction() {
     sessionStorage.clear()
