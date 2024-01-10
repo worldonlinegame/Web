@@ -47,7 +47,7 @@ registroform.addEventListener('submit', (e)=>{
 
     // creamos la base de datos en la store del navegador en un array
 
-    const Users = JSON.parse(localStorage.getItem('SubirImage')) || []
+    const Users = JSON.parse(localStorage.getItem('#SubirImage')) || []
     isUserRegistered = inputFile.find(user => user.email === email)
     if(isUserRegistered){
         return alert('No se pudo cargar la imagen')
