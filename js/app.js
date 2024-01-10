@@ -37,6 +37,9 @@ inputFile.addEventListener("change", e=>{
     myFile.src = URL.createObjectURL(blob)
 })
 
-function cerrarSession(e){
-    sessionStorage.clear()
-}
+object.onclick = function(){myScript};
+
+function myFunction() {
+    document.getElementById("logout").onclick
+    window.location.replace('login.html')
+  }
