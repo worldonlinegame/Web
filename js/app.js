@@ -34,3 +34,27 @@ inputFile.addEventListener("change", e=>{
     myFile.src = URL.createObjectURL(blob)
 })
 
+
+/*Nuevo codigo para guardar la image en la store del navegador*/ 
+
+
+const registroform = document.querySelector("#registroform")
+registroform.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    const name = document.querySelector(myFile.src).value
+    
+    
+
+    // creamos la base de datos en la store del navegador en un array
+
+    const Users = JSON.parse(localStorage.getItem('SubirImage')) || []
+    isUserRegistered = inputFile.find(user => user.email === email)
+    if(isUserRegistered){
+        return alert('No se pudo cargar la imagen')
+    }
+    Users.push({myImage: myImage, myFile: myFile})
+    localStorage.setItem('users',JSON.stringify(myFile.src))
+    alert('Se ha registrado satisfactoriamente!')
+    window.location.href = 'index.html'
+    
+})
