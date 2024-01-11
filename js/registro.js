@@ -12,6 +12,7 @@ registroform.addEventListener('submit', (e)=>{
     if(isUserRegistered){
         return alert('El usuario ya existe!')
     }
+    
     Users.push({name: name, email: email, password: password})
     localStorage.setItem('users',JSON.stringify(Users))
     alert('Se ha registrado satisfactoriamente!')
