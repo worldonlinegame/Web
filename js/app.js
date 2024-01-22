@@ -1,12 +1,6 @@
 /* crear la conexion a la base de datos blog */
 
 // app.js
-
-const express = require('express');
-const multer = require('multer');
-const path = require('path');
-const app = express();
-
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
 
@@ -18,6 +12,16 @@ inputFile.addEventListener("change", e=>{
     localStorage.setItem('users',JSON.stringify(myFile.src))
    
 })
+
+
+
+
+const express = require('express');
+const multer = require('multer');
+const path = require('path');
+const app = express();
+
+
 
 // Configurar el almacenamiento
 const storage = multer.diskStorage({
