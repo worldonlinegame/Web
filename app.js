@@ -24,9 +24,10 @@ app.post('/upload', (req, res) => {
       // Manejar el error
     } else {
       if(req.file == undefined){
+        res.status(400).send(req.file);
         // Ningún archivo seleccionado
       } else {
-        res.status(400).send(req.file);
+        
         // Archivo subido exitosamente, puedes guardar los detalles del archivo en una base de datos y luego mostrarlo en index.html
         res.redirect('index.html');
       }
