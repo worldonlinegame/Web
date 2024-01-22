@@ -18,7 +18,7 @@ inputFile.addEventListener("change", e=>{
     localStorage.setItem('users',JSON.stringify(myFile.src))
    
 })
-/*
+
 // Configurar el almacenamiento
 const storage = multer.diskStorage({
   destination: './public/images',
@@ -50,7 +50,7 @@ app.post('/upload', (req, res) => {
     }
   });
 });
-*/
+
 app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
 
 
