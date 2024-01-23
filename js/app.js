@@ -13,11 +13,11 @@ const app = express();
 app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
 
 //app.use(express.static('public'));
-const imag = express();
+const apps = express();
 
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
-[post:'./index.html', myImage: myImage, myFile: myFile]
+
 const images = app.post('./index.html', (req, res) => {
  
 
