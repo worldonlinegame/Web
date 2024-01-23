@@ -16,6 +16,7 @@ app.use(express.static('public'));
 
 readdir.listen('index.html');
 
+
 /*
 
 const inputFile = document.getElementById("myImage")
