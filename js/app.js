@@ -17,7 +17,7 @@ const imag = express();
 
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
-
+[post]
 const images = app.post('./index.html', (req, res) => {
  
 
