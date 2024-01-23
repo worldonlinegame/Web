@@ -2,11 +2,21 @@
 
 // app.js
 
-/*
+
 const express = require('express');
+const { readdir } = require('fs');
 const multer = require('multer');
 const path = require('path');
 const app = express();
+
+
+app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
+
+app.use(express.static('public'));
+
+readdir.listen('index.html');
+
+/*
 
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
@@ -21,8 +31,8 @@ inputFile.addEventListener("change", e=>{
    
 })
 
-
 */
+
 
 
 /*
