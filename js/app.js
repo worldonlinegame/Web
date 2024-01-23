@@ -2,7 +2,7 @@
 
 // app.js
 
-
+/*
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
@@ -22,7 +22,7 @@ inputFile.addEventListener("change", e=>{
 })
 
 
-
+*/
 
 
 /*
@@ -58,12 +58,13 @@ app.post('/upload', (req, res) => {
       }
     }
   });
-  
+  res.redirect('index.html');
 });
-*/
-res.redirect('index.html');
-
 app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
+*/
+
+
+
 
 
 
