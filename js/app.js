@@ -1,8 +1,16 @@
 /* crear la conexion a la base de datos blog */
 
 // app.js
+
+
+const express = require('express');
+const multer = require('multer');
+const path = require('path');
+const app = express();
+
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
+
 
 inputFile.addEventListener("change", e=>{
     console.log(myImage.file)
@@ -16,11 +24,8 @@ inputFile.addEventListener("change", e=>{
 
 
 
-const express = require('express');
-const multer = require('multer');
-const path = require('path');
-const app = express();
 
+/*
 
 
 // Configurar el almacenamiento
@@ -55,6 +60,7 @@ app.post('/upload', (req, res) => {
   });
   
 });
+*/
 res.redirect('index.html');
 
 app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
