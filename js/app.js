@@ -12,8 +12,8 @@ const app = express();
 
 app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
 
-//app.use(express.static('public'));
-const apps = express();
+app.use(express.static('public'));
+//const app = express();
 
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
@@ -23,6 +23,8 @@ const images = app.post('./index.html', (req, res) => {
 
   const myImage = res.send('myImage').res.body.myImage
   const myFile = res.send('myFile').res.body.myFile
+
+  console.log(myImage, myFile);
 
   readdir.listen('index.html');
 });
