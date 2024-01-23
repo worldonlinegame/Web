@@ -12,7 +12,7 @@ const app = express();
 
 app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
 
-app.use(express.static('public'));
+//app.use(express.static('public'));
 
 readdir.listen('index.html');
 
