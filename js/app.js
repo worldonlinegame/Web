@@ -14,29 +14,35 @@ const app = express();
 const PORT = 3000;
 const expressApp = express();
 
-expressApp.post('/upload', (req, res) => {
-  console.log(req.header['content-type']);
+import  express from 'express';
+import multer from 'multer';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-  const boundary = req.header['content-type'].split('boundary=')[1];
+const PORTs = 3000;
+const CURRENT_DIR = dirname(fileURLToPath(import.meta.url));
 
-  let body = '';
-  req.on('data', (chunk) => (body += chunk));
-
-
-
-  req.on('end', () => {
-
-    body.split(boundary).map((data, index) => console.log(index, data));
+const multerUpload = multer( {
+    dest: join(CURRENT_DIR, '../uploads'), 
+    limits: {
+        filedSize: 10000000
+    }
+        
+    }
     
     
-  });
-  res.sendStatus(200);
-    
-  });
-  expressApp.listen(PORT, () => 
-  console.log(`Servidor iniciado en el puerto 3000 ${PORT}`)
-  
-  );
+    );
+const express = Express();
+
+expressApp.post('/upload', multerUpload.single('myImage'), (req, res) => {
+    console.log(req.file);
+
+    res.sendStatus(200);
+});
+
+
+express.listen(PORTs, () => console.log(`Servidor iniciado en el puerto ${PORTs}`));
+
 /*
 app.use(express.static('public'));
 //const app = express();

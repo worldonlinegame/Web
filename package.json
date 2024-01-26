@@ -4,8 +4,7 @@
   "description": "MIT License",
   "main": "index.js",
   "scripts": {
-   // "start": " node ./js/app.js"
-   "start": "node index.js"
+   "start": "node ../js/app.js"
   },
   "keywords": [],
   "author": "",

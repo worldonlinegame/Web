@@ -19,7 +19,8 @@ logout.addEventListener('click', ()=>{
 
 
 /* Funcion para subir imagenes */
-import  Express from 'express';
+
+import  express from 'express';
 import multer from 'multer';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
