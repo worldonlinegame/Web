@@ -14,6 +14,8 @@ app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
 
 
 expressApp.post('/upload', (req, res) => {
+  console.log(req.file);
+
   upload(req, res, (err) => {
     if(err){
       console.logo('Error al subir el archivo');
