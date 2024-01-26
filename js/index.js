@@ -20,18 +20,33 @@ logout.addEventListener('click', ()=>{
 
 /* Funcion para subir imagenes */
 
+const express = require('express');
+
 import  express from 'express';
+
 import multer from 'multer';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const PORT = 3000;
 const CURRENT_DIR = dirname(fileURLToPath(import.meta.url));
+const MIMETYPES = ['image/jpeg', 'image/png', 'image/gif'];
 
 const multerUpload = multer( {
-    dest: join(CURRENT_DIR, '../uploads'), 
+   storage: multer.diskStorage({
+       destination: join(CURRENT_DIR, '../uploads'),
+       filename:(res, file, cb) => {
+           cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
+       }
+   }),
+    fileFilter: (req, file, cb)=>{
+        if(MIMETYPES.includes(file.mimetype)){ cb(null, true);
+        const fileExtension = extname(file.originalname);
+        }else{ cb(new Error(`Only ${MIMETYPES.join('')} are allowed`));
+        }
+    },
     limits: {
-        filedSize: 10000000
+        filedSize: 10000000,
     }
         
     }
@@ -46,6 +61,8 @@ expressApp.post('/upload', multerUpload.single('myImage'), (req, res) => {
     res.sendStatus(200);
 });
 
+express.Application.use('/upload', express.static(join(CURRENT_DIR, '../uploads')));
 
 express.listen(PORT, () => console.log(`Servidor iniciado en el puerto ${PORT}`));
+
 
