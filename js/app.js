@@ -12,6 +12,27 @@ const app = express();
 
 app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
 
+
+expressApp.post('/upload', (req, res) => {
+  upload(req, res, (err) => {
+    if(err){
+      console.logo('Error al subir el archivo');
+    } else {
+      if(req.file == undefined){
+        res.status(400).send(req.file);
+        console.log(res.file)
+        // Ningún archivo seleccionado
+      } else {
+        
+        // Archivo subido exitosamente, puedes guardar los detalles del archivo en una base de datos y luego mostrarlo en index.html
+        res.redirect('index.html');
+      }
+    }
+  });
+  res.redirect('index.html');
+})
+
+/*
 app.use(express.static('public'));
 //const app = express();
 
@@ -29,7 +50,7 @@ const images = app.post('./index.html', (req, res) => {
   readdir.listen('index.html');
 });
 
-
+*/
 
 
 /*
