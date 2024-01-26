@@ -21,13 +21,29 @@ logout.addEventListener('click', ()=>{
 /* Funcion para subir imagenes */
 import  Express from 'express';
 import multer from 'multer';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const PORT = 3000;
+const CURRENT_DIR = dirname(fileURLToPath(import.meta.url));
 
-const multerUpload = multer( );
+const multerUpload = multer( {
+    dest: join(CURRENT_DIR, '../uploads'), 
+    limits: {
+        filedSize: 10000000
+    }
+        
+    }
+    
+    
+    );
 const express = Express();
 
-expressApp.post('/upload');
+expressApp.post('/upload', multerUpload.single('myImage'), (req, res) => {
+    console.log(req.file);
+
+    res.sendStatus(200);
+});
 
 
 express.listen(PORT, () => console.log(`Servidor iniciado en el puerto ${PORT}`));
