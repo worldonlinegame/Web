@@ -10,30 +10,33 @@ const path = require('path');
 const app = express();
 
 
-app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
-
+//app.listen(3000, () => console.log('Servidor iniciado en el puerto 3000'));
+const PORT = 3000;
+const expressApp = express();
 
 expressApp.post('/upload', (req, res) => {
-  console.log(req.file);
+  console.log(req.header['content-type']);
 
-  upload(req, res, (err) => {
-    if(err){
-      console.logo('Error al subir el archivo');
-    } else {
-      if(req.file == undefined){
-        res.status(400).send(req.file);
-        console.log(res.file)
-        // Ningún archivo seleccionado
-      } else {
-        
-        // Archivo subido exitosamente, puedes guardar los detalles del archivo en una base de datos y luego mostrarlo en index.html
-        res.redirect('index.html');
-      }
-    }
+  const boundary = req.header['content-type'].split('boundary=')[1];
+
+  let body = '';
+  req.on('data', (chunk) => (body += chunk));
+
+
+
+  req.on('end', () => {
+
+    body.split(boundary).map((data, index) => console.log(index, data));
+    
+    
   });
-  res.redirect('index.html');
-})
-
+  res.sendStatus(200);
+    
+  });
+  expressApp.listen(PORT, () => 
+  console.log(`Servidor iniciado en el puerto 3000 ${PORT}`)
+  
+  );
 /*
 app.use(express.static('public'));
 //const app = express();
