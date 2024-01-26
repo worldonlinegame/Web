@@ -4,7 +4,7 @@
   "description": "MIT License",
   "main": "index.js",
   "scripts": {
-    "start": "node ./js/index.js"
+    "start": "node --watch ./js/index.js"
   },
   "keywords": [],
   "author": "",
