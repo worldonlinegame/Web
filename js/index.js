@@ -1,12 +1,12 @@
 
- //Esta funcion carga la imagen pero no hace nada ya que la store del navegador no tiene subir imagenes
+//Esta funcion carga la imagen pero no hace nada ya que la store del navegador no tiene subir imagenes
 const user = JSON.parse(localStorage.getItem('login_success')) || false
-if(!user){
+if (!user) {
     window.location.href = 'login.html'
 }
 
 const logout = document.querySelector('#logout')
-logout.addEventListener('click', ()=>{
+logout.addEventListener('click', () => {
     alert('Hasta pronto')
     localStorage.removeItem('login_success')
     window.location.href = 'index.html'
@@ -16,24 +16,24 @@ logout.addEventListener('click', ()=>{
  */
 
 const loginform = document.querySelector('#loginform')
-loginform.addEventListener('submit', (e)=>{
-e.preventDefault()
-const email = document.querySelector('#email').value
-const password = document.querySelector('#password').value
-const Users = JSON.parse(localStorage.getItem('users')) || []
-const validUser = Users.find(user => user.email === email && user.password === password)
-if(!validUser){
-    return alert('Usuario y/o contraseña incorrectos!')
-}
-alert(`Bienvenid@ ${validUser.name} a la comunidad fGreat!`)
-localStorage.setItem('login_success', JSON.stringify(validUser))
-window.location.href = 'index.html'
+loginform.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const email = document.querySelector('#email').value
+    const password = document.querySelector('#password').value
+    const Users = JSON.parse(localStorage.getItem('users')) || []
+    const validUser = Users.find(user => user.email === email && user.password === password)
+    if (!validUser) {
+        return alert('Usuario y/o contraseña incorrectos!')
+    }
+    alert(`Bienvenid@ ${validUser.name} a la comunidad fGreat!`)
+    localStorage.setItem('login_success', JSON.stringify(validUser))
+    window.location.href = 'index.html'
 })
 
 /* formulario de registro*/
 
 const registroform = document.querySelector("#registroform")
-registroform.addEventListener('submit', (e)=>{
+registroform.addEventListener('submit', (e) => {
     e.preventDefault()
     const name = document.querySelector('#name').value
     const email = document.querySelector('#email').value
@@ -43,14 +43,14 @@ registroform.addEventListener('submit', (e)=>{
 
     const Users = JSON.parse(localStorage.getItem('users')) || []
     isUserRegistered = Users.find(user => user.email === email)
-    if(isUserRegistered){
+    if (isUserRegistered) {
         return alert('El usuario ya existe!')
     }
-    Users.push({name: name, email: email, password: password})
-    localStorage.setItem('users',JSON.stringify(Users))
+    Users.push({ name: name, email: email, password: password })
+    localStorage.setItem('users', JSON.stringify(Users))
     alert('Se ha registrado satisfactoriamente!')
     window.location.href = 'login.html'
-    
+
 })
 
 
@@ -70,7 +70,7 @@ const multer = require('multer');
 
 const app = express();
 
-app.post('/uploads', upload.single('myImage'), (req, res)=>{
+app.post('/uploads', upload.single('myImage'), (req, res) => {
     console.log(req.file);
     res.send('Imagen subida');
 })
