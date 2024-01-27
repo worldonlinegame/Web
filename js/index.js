@@ -1,5 +1,5 @@
 
-//Esta funcion carga la imagen pero no hace nada ya que la store del navegador no tiene subir imagenes
+//Esta funcion redirecciona al login si no existe un usuario
 const user = JSON.parse(localStorage.getItem('login_success')) || false
 if (!user) {
     window.location.href = 'login.html'
