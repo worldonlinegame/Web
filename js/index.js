@@ -64,9 +64,12 @@ la url de github es: https://worldonlinegame.github.io/Web/public/fcbook.png
 
 
 /* Funcion para subir imagenes */
+
 /*
 const express = require('express');
 const multer = require('multer');
+
+const upload = multer({ dest: 'uploads/' });
 
 const app = express();
 
@@ -82,6 +85,6 @@ import multer from 'multer';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-
 */
+
 
