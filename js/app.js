@@ -14,14 +14,27 @@ const app = express();
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
 
+const CLODINARY_URL = "https://api.cloudinary.com/v1_1/dxjxkxw1n/image/upload"
+const CLODINARY_UPLOAD_PRESET = "ml_default"
 
-inputFile.addEventListener("change", (e)=>{
+
+inputFile.addEventListener("change", async (e)=>{
   const file = e.target.files[0]
-  myImage.src = URL.createObjectURL(file)
-   
+
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", CLODINARY_UPLOAD_PRESET);
+  
+ const res = await axios.post(CLODINARY_URL, formData, {
+    headers: {
+      "Content-Type": "application/form-data"
+    }
+    
+  });
+  console.log(res)
     
    
-})
+});
 
 
 
