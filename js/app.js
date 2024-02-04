@@ -16,11 +16,11 @@ const expressApp = express();
 
 //import  express from 'express';
 //import multer from 'multer';
-import { dirname } from 'path';
+import { _dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const PORTs = 3000;
-const CURRENT_DIR = dirname(fileURLToPath(import.meta.url));
+const CURRENT_DIR = _dirnamedirname(fileURLToPath(import.meta.url));
 
 const multerUpload = multer( {
     dest: join(CURRENT_DIR, '../uploads'), 
