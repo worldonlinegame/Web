@@ -14,8 +14,9 @@ const app = express();
 const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
 
-const CLODINARY_URL = "https://api.cloudinary.com/v1_1/dxjxkxw1n/image/upload"
-const CLODINARY_UPLOAD_PRESET = "o5ueb87k"
+
+CLOUDINARY_URL="cloudinary://117812972249589:RnpU_py4isgtLz0aZbruc_t5ZUY@dre4dqrcw"
+const CLODINARY_UPLOAD_PRESET = "dre4dqrcw"
 
 
 inputFile.addEventListener("change", async (e)=>{
