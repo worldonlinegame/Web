@@ -2,13 +2,13 @@
 
 // app.js
 
-
+/*
 const express = require('express');
 const { readdir } = require('fs');
 const multer = require('multer');
 const path = require('path');
 const app = express();
-
+*/
 
 
 const inputFile = document.getElementById("myImage")
