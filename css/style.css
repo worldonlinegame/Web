@@ -18,10 +18,10 @@
     margin-top: -85px;
   }
 */
-.img-responsive{
+.img-responsive.src{
     width: 100%;
     height: 100%;
-    background-image: "./public/images/logoo.png";
+    background-image: "../public/images/logoo.png";
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
