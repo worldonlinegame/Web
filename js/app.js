@@ -15,8 +15,8 @@ const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
 
 
-CLOUDINARY_URL="cloudinary://117812972249589:RnpU_py4isgtLz0aZbruc_t5ZUY@dre4dqrcw"
-const CLODINARY_UPLOAD_PRESET = "dre4dqrcw"
+CLOUDINARY_URL="https://res.cloudinary.com/dre4dqrcw/image/upload/v1707071181/"
+const CLODINARY_UPLOAD_PRESET = "siit7kc1"
 
 
 inputFile.addEventListener("change", async (e)=>{
