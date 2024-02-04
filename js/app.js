@@ -9,9 +9,9 @@ const multer = require('multer');
 const path = require('path');
 const app = express();
 */
-import com.cloudinary.*;
-...
-Cloudinary cloudinary = new Cloudinary(ObjectUtils.asMap(
+import "com.cloudinary.*";
+import { Cloudinary } from "cloudinary";
+Cloudinary: cloudinary = new Cloudinary(ObjectUtils.asMap(
   "cloud_name", "dre4dqrcw",
   "api_key", "117812972249589",
   "api_secret", "RnpU_py4isgtLz0aZbruc_t5ZUY"));
