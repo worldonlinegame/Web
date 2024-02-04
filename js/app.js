@@ -16,11 +16,9 @@ const myImage = document.getElementById("myFile")
 
 
 inputFile.addEventListener("change", (e)=>{
-    console.log(myImage.file)
-    const blob = inputFile.files[0]
-    myFile.src = URL.createObjectURL(blob)
-    Users.push({myImage: myImage, myFile: myFile})
-    localStorage.setItem('users',JSON.stringify(myFile.src))
+    console.log(e)
+   
+    
    
 })
 
