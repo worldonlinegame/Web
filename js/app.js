@@ -15,7 +15,7 @@ const inputFile = document.getElementById("myImage")
 const myImage = document.getElementById("myFile")
 
 
-CLOUDINARY_URL="https://res.cloudinary.com/dre4dqrcw/image/upload/v1707071181/"
+CLOUDINARY_URL="https://res.cloudinary.com/dre4dqrcw/image/upload/c_limit,h_100,w_150/v1707071181/"
 const CLODINARY_UPLOAD_PRESET = "siit7kc1"
 
 
