@@ -38,6 +38,8 @@ inputFile.addEventListener("change", async (e)=>{
     
   });
   console.log(res)
+
+  
     
    
 });
