@@ -33,8 +33,8 @@ inputFile.addEventListener("change", async (e)=>{
   
  const res = await axios.post(CLODINARY_URL, formData, {
     headers: {
-      "Content-Type": "application/form-data"
-      "formData": formData
+      "Content-Type": "application/form-data",
+      "formData": "formData"
     }
     
   });
